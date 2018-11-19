@@ -1,0 +1,23 @@
+.mb > div {
+    border-bottom: 2px solid lightgray;
+}
+
+.mb {
+    padding: 10px 0;
+}
+
+.mb i {
+    font-size: 1.5em;
+    float: right;
+}
+
+.mb-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mb-list li {
+    border: 2px solid lightgray;
+    margin: 10px 0;
+    padding: 5px;
+}

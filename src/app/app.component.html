@@ -1,66 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<!-- <div class="container">
-  <ngb-tabset>
-    <ngb-tab title="Simple">
-      <template ngbTabContent>
-        <p>This is the content of the first tab!</p>
-        <ngb-alert [dismissible]="false">
-          <strong>Warning!</strong> This is an alert!
-        </ngb-alert>
-      </template>
-    </ngb-tab>
-    <ngb-tab title="TEST">
-      <template ngbTabTitle><b>Fancy</b> title</template>
-      <template ngbTabContent>
-        <p>This is the content of the second tab!</p>
-        <p><ngb-progressbar type="success" [value]="25"></ngb-progressbar></p>
-        <p><ngb-progressbar type="info" [value]="50"></ngb-progressbar></p>
-        <p><ngb-progressbar type="warning" [value]="75"></ngb-progressbar></p>
-        <p><ngb-progressbar type="danger" [value]="100"></ngb-progressbar></p>
-      </template>
-    </ngb-tab>
-    <ngb-tab title="Disabled" [disabled]="true">
-      <template ngbTabContent>
-        <p>This tab is disabled</p>
-      </template>
-    </ngb-tab>
-  </ngb-tabset>
-</div> -->
+<!--The nav bar needs to be it's own component-->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <i class="fas fa-user-md"></i>
+    - Member Manager
+  </a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
 
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel title="Simple">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <span>&#9733; <b>Fancy</b> title &#9733;</span>
-    </ng-template>
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Disabled" [disabled]="true">
-    <ng-template ngbPanelContent>
-      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-      labore sustainable VHS.
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <!--The left navigation-->
+  <div class="row">
+    <div class="col-3 left-list">
+      <app-list></app-list>
+    </div>
+    <!--The main content-->
+    <div class="col">
+      <h1>Welcome to the {{title}}</h1>
+      <i class="fas fa-stroopwafel"></i>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

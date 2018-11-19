@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 import { TabsetComponent } from './tabset.component';
+import { HomeComponent } from './home.component';
 
-const routes: Routes = [{ path: '', component: AppComponent },
-{ path: 'tabs', component: TabsetComponent }];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'tabs', component: TabsetComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
